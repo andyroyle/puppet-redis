@@ -20,6 +20,7 @@ class redis::params {
   $redis_src_dir = '/opt/redis-src'
   $redis_bin_dir = '/opt/redis'
   $redis_max_memory = '4gb'
+  $redis_max_memory_policy = 'volatile-lru'
   $redis_max_clients = false
   $redis_timeout = 300         # 0 = disabled
   $redis_loglevel = 'notice'
@@ -32,5 +33,4 @@ class redis::params {
   $redis_slaveof_master_port = 6379
   $redis_slave_priority = 100
   $redis_snapshotting = { '900' => '1', '300' => '10', '60' => '10000' }
-
 }
